@@ -17,6 +17,7 @@
   transition: all 0.2s;
 }
 
+
 .textarea:hover {
   cursor: pointer;
   background-color: #eeeeee;
@@ -31,4 +32,20 @@
 .coment{
     display: block;
     margin: auto;
+}
+.clasificacion{
+
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+}
+@media (max-width: 600px) {
+  .textarea {
+  width: 300px;
+  
+  
+}
+
+
 }

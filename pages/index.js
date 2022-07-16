@@ -64,6 +64,19 @@ const goToTop = () => {
              </span>
             
             )}
+
+          <div className={styles.burbuja}>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+          </div>
     </div>
   )
 }

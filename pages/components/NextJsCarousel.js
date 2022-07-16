@@ -97,7 +97,7 @@ export default class NextJsCarousel extends Component {
                              <form  id='form'>
                               
 
-  <p id='clasificacion'>
+  <p id='clasificacion' className={Styles.clasificacion}>
     <input   id="radio1"  type="radio" name="estrellas" value="5" checked={this.state.selectedOption === '5'} onChange={this.handleOptionChange} />
     <label  htmlFor ="radio1">★</label>
     <input  id="radio2" checked={this.state.selectedOption === '4'} onChange={this.handleOptionChange}  type="radio" name="estrellas" value="4"/>
@@ -113,8 +113,9 @@ export default class NextJsCarousel extends Component {
 
 </form>
               
-              <Carousel  onChange={this.cambiarimg} 
-              showArrows={true} 
+              <Carousel className={Styles.carousel}  onChange={this.cambiarimg} 
+              showArrows={true}
+              animationHandler="fade"
               showThumbs={false} 
               showIndicators={false}  
               autoPlay={false} 
