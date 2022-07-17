@@ -41,7 +41,7 @@ const goToTop = () => {
         
         </p>
 
-        <div className={styles.grid}>
+        <div className={styles.grid }>
        < NextJsCarousel/>
         </div>
       </main>
@@ -52,8 +52,9 @@ const goToTop = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-         Desarrollado por{' '}
+        
           <span className={styles.logo}>
+          Desarrollado por {" "}
             <Image src="/vercel.svg" alt="Vercel Logo" width={48} height={48} />
           </span>
         </a>
