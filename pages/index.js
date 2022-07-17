@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import { useEffect , useState } from 'react'
-import Image from 'next/image'
+import Image from './components/Image'
 import styles from '../styles/Home.module.css'
 import NextJsCarousel from './components/NextJsCarousel'
+import { FcNext, FcPrevious ,FcRules } from "react-icons/fc";
+import 'animate.css';
 
 export default function Home() {
   const [showTopBtn, setShowTopBtn] = useState(false);
@@ -30,13 +32,13 @@ const goToTop = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Bienvenido al <a href="#">Catálogo!</a>
+        <h1 className={styles.title+ " animate__animated animate__backInLeft"}>
+         <FcRules/> Bienvenido al <a href="#">Catálogo!</a>
         </h1>
 
-        <p className={styles.description}>
-         Califique los diseños segun su agrado: {' '}
-          <code className={styles.code}>Rango(1 - 5) </code>
+        <p className={styles.description+" animate__animated animate__flipInY"}>
+        <FcPrevious/> Califique los diseños segun su agrado <FcNext/> {' '}
+        
         </p>
 
         <div className={styles.grid}>
@@ -64,6 +66,19 @@ const goToTop = () => {
              </span>
             
             )}
+
+          <div className={styles.burbuja}>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+            <div className={styles.burbuja}></div>
+          </div>
     </div>
   )
 }

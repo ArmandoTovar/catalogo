@@ -5,9 +5,11 @@ const nextConfig = {
   images:true
 }
 module.exports = {
-  experimental: {
-    images: {
-      unoptimized: true,
-    },
+  images: {
+    disableStaticImages: true,
+    loader: "custom",
+    unoptimized: true,
+
+
   },
 }
