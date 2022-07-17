@@ -4,9 +4,10 @@ import { Carousel } from 'react-responsive-carousel';
 import { BsFillSuitHeartFill } from "react-icons/bs";
 import Styles from '../components/NextJsCarousel.module.css'
 import { initializeApp } from 'firebase/app';
-import Image from 'next/image';
+import Image from '../components/Image';
 import {getDatabase ,get ,set , ref} from 'firebase/database'
 import { getFirestore, collection, getDocs ,setDoc } from 'firebase/firestore/lite';
+import 'animate.css';
 // Follow this pattern to import other Firebase services
 // import { } from 'firebase/<service>';
 
@@ -31,7 +32,7 @@ function writeUserData() {
     f1: "2",
   });}
 
-const data=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]
+const data=[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
 export default class NextJsCarousel extends Component {
   constructor() {
     super();
@@ -89,7 +90,8 @@ export default class NextJsCarousel extends Component {
   render() {
         return (
             <div>
-              <div className={Styles.coment}>                             <textarea className={Styles.textarea} placeholder='Indicaciones adicionales referente a secciones específicas' value={this.state.description} onChange={this.cambiardes} id="w3review" name="w3review" rows="4" cols="50">
+              <div className={Styles.coment+" animate__zoomInUp animate__animated animate__delay-1s	"}>                          
+                 <textarea className={Styles.textarea} placeholder='Indicaciones adicionales referente a secciones específicas ✏' value={this.state.description} onChange={this.cambiardes} id="w3review" name="w3review" rows="4" cols="50">
 </textarea>
 
 </div>
@@ -113,9 +115,9 @@ export default class NextJsCarousel extends Component {
 
 </form>
               
-              <Carousel className={Styles.carousel}  onChange={this.cambiarimg} 
+              <Carousel className={Styles.carousel + " animate__bounceInUp animate__animated animate__delay-2s"}  onChange={this.cambiarimg} 
               showArrows={true}
-              animationHandler="fade"
+              
               showThumbs={false} 
               showIndicators={false}  
               autoPlay={false} 
@@ -124,7 +126,7 @@ export default class NextJsCarousel extends Component {
                  {
                   data.map((x)=>(
                     <div key={x}>         
-                      <Image  width='1920px' height='7000px' src={`./img/img (${x}).png`} alt={`imag${x}`}/>
+                      <Image  placeholder="blur" blurDataURL="data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 100 100' enable-background='new 0 0 100 100' xml:space='preserve'%3E%3Crect fill='%2363a8f7' width='3' height='100' transform='translate(0) rotate(180 3 50)'%3E%3Canimate attributeName='height' attributeType='XML' dur='1s' values='30; 100; 30' repeatCount='indefinite'/%3E%3C/rect%3E%3Crect x='17' fill='%2363a8f7' width='3' height='100' transform='translate(0) rotate(180 20 50)'%3E%3Canimate attributeName='height' attributeType='XML' dur='1s' values='30; 100; 30' repeatCount='indefinite' begin='0.1s'/%3E%3C/rect%3E%3Crect x='40' fill='%2363a8f7' width='3' height='100' transform='translate(0) rotate(180 40 50)'%3E%3Canimate attributeName='height' attributeType='XML' dur='1s' values='30; 100; 30' repeatCount='indefinite' begin='0.3s'/%3E%3C/rect%3E%3Crect x='60' fill='%2363a8f7' width='3' height='100' transform='translate(0) rotate(180 58 50)'%3E%3Canimate attributeName='height' attributeType='XML' dur='1s' values='30; 100; 30' repeatCount='indefinite' begin='0.5s'/%3E%3C/rect%3E%3Crect x='80' fill='%2363a8f7' width='3' height='100' transform='translate(0) rotate(180 76 50)'%3E%3Canimate attributeName='height' attributeType='XML' dur='1s' values='30; 100; 30' repeatCount='indefinite' begin='0.1s'/%3E%3C/rect%3E%3C/svg%3E" width='1920px' height='7000px' src={`/img/img (${x}).png`} alt={`imag${x}`}/>
                    
                   
                   </div>

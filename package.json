@@ -9,13 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "firebase": "^9.9.0",
+    "flat-color-icons": "^1.1.0",
     "next": "12.2.2",
     "next-optimized-images": "^2.6.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
-    "react-responsive-carousel": "^3.2.23"
+    "react-responsive-carousel": "^3.2.23",
+    "sharp": "^0.30.7"
   },
   "devDependencies": {
     "eslint": "8.19.0",
