@@ -22,7 +22,11 @@
   cursor: pointer;
   background-color: #eeeeee;
 }
+.carousel{
+  box-shadow: 0 0 15px 0 rgba(83, 83, 83, 0.315);
+  background: rgba(255, 255, 255);
 
+}
 .textarea:focus {
   cursor: text;
   color: #333333;
